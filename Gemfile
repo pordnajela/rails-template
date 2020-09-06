@@ -29,13 +29,13 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'haml', '~> 5.1', '>= 5.1.2'
 gem 'dotenv', '~> 2.7', '>= 2.7.6'
-
-group :development, :test do
-  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
-  gem 'factory_bot', '~> 4.8', '>= 4.8.2'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
+gem 'bootstrap-email', '~> 0.3.2'
+gem 'i18n-js', '~> 3.7', '>= 3.7.1'
+gem 'oj', '~> 3.10', '>= 3.10.14'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'groupdate', '~> 5.1'
+# gem 'ahoy_matey', '~> 3.0', '>= 3.0.4'
+gem 'active_model_serializers', '~> 0.10.10'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -44,10 +44,26 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener', '~> 1.7'
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem 'danger', '~> 8.0', '>= 8.0.5'
+  gem 'bullet', '~> 6.1'
+end
+
+group :development, :test do
+  gem 'pry', '~> 0.13.1'
+  gem 'awesome_print', '~> 1.8'
+  gem 'hirb', '~> 0.7.3'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+  gem 'factory_bot', '~> 4.8', '>= 4.8.2'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
+  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
